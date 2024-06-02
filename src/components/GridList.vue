@@ -86,7 +86,7 @@ export default {
   },
   
   search() {
-    console.log(this.countries,"sgadiugasiu");
+    console.log(this.countries,"Testing search");
       this.filteredCountries = this.countries.filter(country =>
         country.name.toLowerCase().includes(this.query.toLowerCase())
       )
