@@ -44,6 +44,8 @@ margin-top: 15px;
 
 .filter-input,
 .filter-select {
+  width: 80%;
+  align-self: center;
   flex: 1;
   padding: 10px;
   border: 1px solid #ddd;
