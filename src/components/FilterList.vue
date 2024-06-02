@@ -1,5 +1,5 @@
 <template>
-<div class= "container-list">
+<div class="container-list" >
   <form @submit.prevent="search" class="filter-list">
     <input v-model="query" class="filter-input" @input="searchItem" placeholder="Search by Country name">
     <button class="filter-button" type="submit">Search</button>
@@ -31,11 +31,13 @@ export default {
 .container-list {
 display: flex;
 flex-direction: column;
+  background-color: #EDE8F5;
 
 .filter-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  // flex-wrap: wrap;
+  flex-direction: column;
+  gap: 20px;
   margin-bottom: 20px;
 }
 
@@ -45,11 +47,16 @@ flex-direction: column;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  background-color: #EDE8F5;
+  // background-color: #997cb8;
   text-align: center;
   input:focus {outline:none;}
   box-shadow:none;
+
 }
+//  input::placeholder {
+//   color: red; /* Change this to any color you prefer */
+// }
+
 
 .filter-button {
   padding: 10px 20px;
@@ -58,11 +65,14 @@ flex-direction: column;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  width: 40%;
+  align-self: center;
   
 }
 
 .filter-button:hover {
   background: #997cb8;
+  
 }
 }
 </style>

@@ -56,7 +56,7 @@ export default {
 }
 
 .grid-list-modal-close {
-  margin-top: 20px;
+  // margin-top: 20px;
   padding: 10px 20px;
   background: #997cb8;
   color: white;

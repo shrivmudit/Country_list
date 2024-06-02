@@ -100,7 +100,8 @@ export default {
 .grid-list-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
   background-color: #EDE8F5;
 
 }
@@ -108,7 +109,7 @@ export default {
 .grid-list-table {
   width: 100%;
   border-collapse: collapse;
-  margin: 20px 0;
+  // margin: 20px 0;
 }
 
 .grid-list-table th,
