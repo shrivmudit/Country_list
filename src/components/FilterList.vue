@@ -31,7 +31,8 @@ export default {
 .container-list {
 display: flex;
 flex-direction: column;
-  background-color: #EDE8F5;
+// background-color: #d3c7e8;
+margin-top: 15px;
 
 .filter-list {
   display: flex;

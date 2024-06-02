@@ -100,16 +100,15 @@ export default {
 .grid-list-container {
   max-width: 1000px;
   margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #EDE8F5;
+ background: #ceb9e5;
+  // color: white;
 
 }
 
 .grid-list-table {
   width: 100%;
   border-collapse: collapse;
-  // margin: 20px 0;
+  margin: 20px 0;
 }
 
 .grid-list-table th,

@@ -77,7 +77,7 @@ export default {
 <style lang="scss">
 
 .app {
-  background-color: #d1c7e0;
+  // background-color: #d1c7e0;
   max-width: 1200px;
   margin: 0 auto;
 }
