@@ -4,7 +4,7 @@
       <h2 class="grid-list-modal-title">{{ country.name.official }}</h2>
       <p><strong>Official Name:</strong> {{ country.name.official }}</p>
       <p><strong>Sub Region:</strong> {{ country.subregion }}</p>
-      <p><strong>UN Member:</strong> {{ country.unMember ? 'Yes' : 'No' }}</p>
+      <p><strong>UN Member:</strong> {{ country.unMember ? "Yes" : "No" }}</p>
       <p><strong>Border Countries:</strong> {{ borderCountries }}</p>
       <button class="grid-list-modal-close" @click="close">Close</button>
     </div>
@@ -18,12 +18,12 @@ export default {
   },
   computed: {
     borderCountries() {
-      return this.country.borders ? this.country.borders.join(', ') : 'None';
+      return this.country.borders ? this.country.borders.join(", ") : "None";
     },
   },
   methods: {
     close() {
-      this.$emit('close');
+      this.$emit("close");
     },
   },
 };
@@ -44,7 +44,7 @@ export default {
 }
 
 .grid-list-modal {
-  background-color: #EDE8F5;
+  background-color: #ede8f5;
   padding: 20px;
   border-radius: 10px;
   max-width: 500px;
@@ -67,6 +67,6 @@ export default {
 }
 
 .grid-list-modal-close:hover {
-   background:rgb(155, 122, 193)8;
+  background: rgb(155, 122, 193) 8;
 }
 </style>
