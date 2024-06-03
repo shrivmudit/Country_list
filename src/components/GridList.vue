@@ -1,5 +1,5 @@
 <template>
-   <!-- <filter-list @search="searchCountries"></filter-list> -->
+   <filter-list @search="searchCountries"></filter-list>
   <div class="grid-list-container">
     <table class="grid-list-table">
       <thead>
@@ -80,18 +80,19 @@ export default {
     showDetails(country) {
       this.selectedCountry = country.details;
     },
-  },
-  created() {
-    this.fetchCountries();
-  },
-  
-  search() {
+    
+    search() {
     console.log(this.countries,"Testing search");
       this.filteredCountries = this.countries.filter(country =>
         country.name.toLowerCase().includes(this.query.toLowerCase())
       )
       console.log(this.filteredCountries);
       }
+  },
+  
+  created() {
+    this.fetchCountries();
+  },
     
 };
 </script>
@@ -100,8 +101,7 @@ export default {
 .grid-list-container {
   max-width: 1000px;
   margin: 0 auto;
- background: #ceb9e5;
-  // color: white;
+//  background: #ceb9e5;
 
 }
 
@@ -109,6 +109,7 @@ export default {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
+  background:#d3c7e8;
 }
 
 .grid-list-table th,
