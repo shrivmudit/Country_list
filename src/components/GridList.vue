@@ -117,6 +117,7 @@ export default {
   padding: 10px;
   text-align: left;
   border: 1px solid rgb(130, 84, 195);
+  color: rgb(63, 12, 86);
 }
 
 .grid-list-row {

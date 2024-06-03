@@ -49,6 +49,7 @@ export default {
   border-radius: 10px;
   max-width: 500px;
   width: 100%;
+  color: rgb(63, 12, 86);
 }
 
 .grid-list-modal-title {
