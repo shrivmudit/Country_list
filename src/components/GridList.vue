@@ -58,7 +58,8 @@ export default {
       try {
         const response = await axios.get(`https://restcountries.com/v3.1/${forAllFetch}`);
          this.countries = response.data;
-        console.log(this.countries);
+         console.log(this.countries, "61");
+        console.log(this.countries,"62");
         this.countries.sort((a, b) => b.population - a.population);
         this.countries = this.countries.slice(0, 20).map(country => ({
           name: country.name.common,
@@ -72,6 +73,8 @@ export default {
           details: country,
         }));
          this.filteredCountries = this.countries;
+         console.log(this.filteredCountries["name"], "75");
+         console.log(this.countries, "76");
       } catch (error) {
         console.error(error);
         this.countries = [];
@@ -81,17 +84,47 @@ export default {
       this.selectedCountry = country.details;
     },
     
-    search() {
-    console.log(this.countries,"Testing search");
-      this.filteredCountries = this.countries.filter(country =>
+    searchCountries(query) {
+    this.countries = query;
+        console.log(this.countries,"Testing search");
+    const forAllFetch = "all"
+      this.filteredCountries = axios.get(`https://restcountries.com/v3.1/${forAllFetch}`);
+      this.filteredCountries = this.filteredCountries.data.filter(country =>
         country.name.toLowerCase().includes(this.query.toLowerCase())
       )
       console.log(this.filteredCountries);
+      },
+      
+      
+      proxyArray(){
+         const forAllFetch = "all";
+         const response = axios.get(`https://restcountries.com/v3.1/${forAllFetch}`);
+let targetArray = response;
+let handler = {
+    get: function(targetArray, property) {
+        if (property in targetArray) {
+            console.log(`Getting the value at index ${property}`);
+            return targetArray[property];
+        } else {
+            return `Property ${property} doesn't exist`;
+        }
+    }
+};
+
+// Creating a Proxy
+let proxyArray = new Proxy(targetArray, handler);
+
+// Fetching values from the proxy array
+console.log(proxyArray[0]); // Output: Getting the value at index 0 \n 1
+console.log(proxyArray[2]); // Output: Getting the value at index 2 \n 3
+console.log(proxyArray[10]); // Output: Property 10 doesn't exist
+
       }
   },
   
   created() {
     this.fetchCountries();
+    this.proxyArray()
   },
     
 };
