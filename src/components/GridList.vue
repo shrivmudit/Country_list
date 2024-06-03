@@ -1,5 +1,5 @@
 <template>
-   <filter-list @search="searchCountries"></filter-list>
+   <!-- <filter-list @search="searchCountries"></filter-list> -->
   <div class="grid-list-container">
     <table class="grid-list-table">
       <thead>
@@ -116,7 +116,7 @@ export default {
 .grid-list-table td {
   padding: 10px;
   text-align: left;
-  border: 1px solid rgb(8, 36, 57);
+  border: 1px solid rgb(130, 84, 195);
 }
 
 .grid-list-row {
